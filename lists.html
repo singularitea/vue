@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!-- Lessons from: -->
+<!-- https://laracasts.com/series/learn-vue-2-step-by-step/episodes/3 -->
+
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <li v-for="name in names">{{name}}</li>
+        </ul>
+
+    </div>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+    
+
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                names: ['Ben', 'Alice', 'Colin', 'Baby']
+            }
+
+        })
+    </script>
+
+</body>
+</html>
