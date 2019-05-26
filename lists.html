@@ -15,6 +15,10 @@
             <li v-for="name in names">{{name}}</li>
         </ul>
 
+        <input id="input" type="text" v-model="newName">
+
+        <button @click="addName">Add Name</button>
+
     </div>
         
 
@@ -28,7 +32,16 @@
             el: '#root',
 
             data: {
+                newName: '',
                 names: ['Ben', 'Alice', 'Colin', 'Baby']
+            },
+
+            methods: {
+                addName() {
+                    this.names.push(this.newName);
+                    this.newName = '';
+
+                }
             }
 
         })
